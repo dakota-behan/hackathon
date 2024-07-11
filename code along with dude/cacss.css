@@ -1,6 +1,23 @@
 .linky{
     font-size: x-large;
+    color:'red';
+
+}
+body{
+    font-size: small;
 }
 a{
     font-size: xx-large;
+    background-color: 'black';
+}
+a:visited {
+     color: 'chartreuse';
+    
+    }
+a:focus { 
+    color: 'green';
+    background-color: 'green';
+}
+a:hover{
+    background-color: 'pink';
 }

@@ -1,0 +1,6 @@
+console.log('You are connected')
+console.log('\n---------------\n')
+const test1 = document.getElementById('first')
+const test2 = document.getElementById('test')
+console.log(test1.innerText)
+console.log(test2.innerText)
