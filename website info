@@ -1,0 +1,72 @@
+[
+    [
+        ["LATTE","$4.75(H)/$5.25(C)",]
+        [" CORTADO","$4.25(H)/$4.75(C)",]
+        " DRIP COFFEE  Small: $3(H)/$3.50(C)  Medium: $3.50(H) Large: $4(H)/$4.25(C)",
+        [" CAFE AU LAIT","$3.25(H)"]
+    ],
+    [
+        ["CAPPUCINO","$4.50(H)",]
+        [" MOCHA","$5.75(H)/$6.25(C)",]
+        [" RED EYE","$4.50(H)/$4.75(C)",]
+        [" AMERICANO","$3.75(H)/$4.25(C)"]
+    ],
+    [
+        ["MATCHA LATTE","$5.25(H)/$5.75(C)",]
+        [" HOT CHOCOLATE","$4.50(H) S'mores: $5.50",]
+        [" NUTELLA LATTE","$5.75(H)/$6.25(C)",]
+        [" CHAI","$5.00(H)/$5.50(C)",]
+        [" DIRTY CHAI","$6.25(H)/$6.75(C)"]
+    ],
+    [
+        ["LAVENDAR LATTE","$5.75(H)/$6.25(C)",]
+        [" ROSE LATTE","$5.75(H)/$6.25(C)",]
+        [" BROWN SUGAR LATTE","$5.75(H)/$6.25(C)",]
+        [" BUMBLEBEE LATTE","$6.25(H)/$6.75(C)"]
+    ],
+    [
+        ["THE OG","  Medium: $4.25 Large: $5.25  Hot: $5.25  Classic milk tea",]
+        [" BROWN SUGAR BOBA ","  Medium: $4.75  Large: $5.75 Hot: $5.75 Caffeine free",]
+        [" TARO BOBA COCONUT BOBA ","  Medium: $4.25 Large: $5.25  Hot: $5.25  Caffeine free, dairy free"]
+    ],
+    [
+        ["FRUIT GREEN/BLACK TEA","  Medium: $4.25 Large: $5.25  Comes in a variety of flavors:  mango/strawberry/passionfruit/ peach/green apple/lychee/kiwi Feel free to mix and match!",]
+        [" FRUIT BLACK TEA"," Medium: $4.25  Large: $5.25  Comes in a variety of flavors: peach/strawberry  Feel free to mix and match!",]
+        [" JASMINE MILK TEA / WINTERMELON MILK TEA"," Medium: $4.25 Large: $5.25  Hot: $5.25  Dairy free"]
+    ],
+    [
+        "​",
+        [" CHICKEN POPPERS","$6.00",]
+        [" MOZZ STICKS","$7.00",]
+        [" PIGS IN A BLANKET","$7.00",]
+        [" TATER TOTS","$5.00"]
+    ],
+    [
+        ["BEYOND BUSSIN SANDWICH","$15.00  SHEEEESH Our new VEGAN sandwich highlighting the beyond burger and our house-made vegan chipotle aioli alongside lettuce, onion and avocado.   ​Comes with a side of our house made chipotle aioli and chips",]
+        [" SPICY CHICKEN SANDWICH","$13.00  Spicy mayo, grilled chicken, crispy bacon and avocado on Italian herb focaccia  Comes with chips",]
+        [" ITALIAN PANINI","$11.00  Prosciutto, pesto, and mozzarella in between herb focaccia and pressed til golden brown and crispy (pesto contains pine nuts)​  Comes with chips",]
+        [" TUNA MELT","$11.00  ​House-made tuna salad with American cheese on Italian herb focaccia pressed to perfection (can be spicy on request)  Comes with chips",]
+        [" ZESTO CHICKEN SANDWICH","$13.00  Basil pesto, grilled chicken, fresh mozzarella and lemon zest on Italian herb focaccia (pesto contains pine nuts)  Comes with chips",]
+        [" TURKEY CLUB","$11.00  Roast turkey, lettuce, tomato, crispy bacon and American cheese on sourdough  Comes with chips",]
+        [" GRILLED CHEESE","$6.50  ​Comes with chips +bacon/tomato/turkey: $1.50"]
+    ],
+    [
+        ["MIXED GREEN SALAD","$6.50  w/tomato, vegan  +smoked salmon: $5.00 +boiled egg: $1.00 +avocado: $1.50",]
+        [" COBB SALAD","$10.00  Romaine lettuce, bacon, egg, chicken, tomato, and avocado tossed with ranch",]
+        [" ​  PIZZA PANINI","$11.00  Pepperoni, fresh mozzarella, marinara and olive oil on Italian herb focaccia and pressed to perfection!  Comes with chips",]
+        [" SMOKED SALMON TARTINE","$11.00  Lemon zest infused cream cheese on toasted heritage wheat. Piled high with smoked salmon and topped with pickled red onion   Comes with a side salad",]
+        [" AVOCADO TOAST","$10.00  Avocado mashed with salt, pepper, lemon juice and olive oil on toasted heritage wheat  Comes with a side salad  +egg: $1  "]
+    ],
+    [
+        ["Pina Colada","$4.75 (M) 5.75 (L) Our coconut boba with pineapple flavor!",]
+        [" MATCHA LEMONADE"," Medium: $5.00  Large: $6.00  Our freshly squeezed lemonade with a balance of an earthy shot of matcha",]
+        [" YUZU-ADE"," Large: $5.25  Popular in South Korea, Yuzu-Ade is a carbonated drink with yuzu marmalade. Yuzu is a citrus with a tart and fragrant flavor of orange and grapefruit.",]
+        [" FRESHLY SQUEEZED LEMONADE"," Medium: $4.00  Large: $5.00  Real lemons with our signature recipe = amazing lemonade"]
+    ],
+    [
+        ["MATCHA LAVENDER OAT","  $6.50  Lavender infused into our oatmilk steamed over a matcha shot.",]
+        [" Berry Lavendar Lemonade","  Medium: $5.25  Large: $6.25  Made with real bourbon and definitely the drink we're most excited for this fall.",]
+        [" Citrus Boba (Grapefruit or Orange) "," Large: $6.00  Made with real fruit juice and fruit slices!",]
+        [" ROTATING BEER/WINE PROGRAM "," Check out our beer and wine at the front of our store! We're constantly rotating out product from local breweries! "]
+    ],
+]
