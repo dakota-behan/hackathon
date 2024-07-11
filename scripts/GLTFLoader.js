@@ -1,4 +1,3 @@
-
 class GLTFLoader extends Loader {
 
 	constructor(manager) {
