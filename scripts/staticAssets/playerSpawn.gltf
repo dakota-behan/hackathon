@@ -1,0 +1,653 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.6.28",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"vr_landmarks":[
+					{
+						"type":0,
+						"base_scale":1.0
+					}
+				],
+				"collection_manager":{
+					"update_header":[
+						{
+							"name":"updated",
+							"last_name":"updated"
+						}
+					],
+					"qcd_slots_blend_data":"{}\nset()"
+				},
+				"sun_pos_properties":{
+					"show_surface":0,
+					"show_analemmas":0,
+					"show_north":0,
+					"latitude":0.0,
+					"day_of_year":317,
+					"sun_object":{},
+					"object_collection":{}
+				},
+				"skinify":{
+					"connect_mesh":0,
+					"connect_parents":0,
+					"generate_all":0,
+					"thickness":0.800000011920929,
+					"finger_thickness":0.25,
+					"apply_mod":1,
+					"parent_armature":1,
+					"sub_level":1
+				},
+				"addon_copy_global_transform_mirror_ob":{},
+				"storypencil_main_workspace":{},
+				"storypencil_main_scene":{},
+				"storypencil_edit_workspace":{},
+				"storypencil_base_scene":{},
+				"render_copy_settings":{
+					"affected_settings":[
+						{
+							"name":"Additional Subdivision [hair_subdiv]",
+							"strid":"hair_subdiv"
+						},
+						{
+							"name":"Antialiasing [simplify_gpencil_antialiasing]",
+							"strid":"simplify_gpencil_antialiasing"
+						},
+						{
+							"name":"Background [stamp_background]",
+							"strid":"stamp_background"
+						},
+						{
+							"name":"Bake Type [bake_type]",
+							"strid":"bake_type"
+						},
+						{
+							"name":"Bake from Multires [use_bake_multires]",
+							"strid":"use_bake_multires"
+						},
+						{
+							"name":"Bias [bake_bias]",
+							"strid":"bake_bias"
+						},
+						{
+							"name":"Cache Result [use_render_cache]",
+							"strid":"use_render_cache"
+						},
+						{
+							"name":"Clear [use_bake_clear]",
+							"strid":"use_bake_clear"
+						},
+						{
+							"name":"Compositing [use_compositing]",
+							"strid":"use_compositing"
+						},
+						{
+							"name":"Crop to Render Region [use_crop_to_border]",
+							"strid":"use_crop_to_border"
+						},
+						{
+							"name":"Curves Shape Type [hair_type]",
+							"strid":"hair_type"
+						},
+						{
+							"name":"Dither Intensity [dither_intensity]",
+							"strid":"dither_intensity"
+						},
+						{
+							"name":"Edge [use_freestyle]",
+							"strid":"use_freestyle"
+						},
+						{
+							"name":"Engine [engine]",
+							"strid":"engine"
+						},
+						{
+							"name":"FPS Base [fps_base]",
+							"strid":"fps_base"
+						},
+						{
+							"name":"FPS [fps]",
+							"strid":"fps"
+						},
+						{
+							"name":"File Extensions [use_file_extension]",
+							"strid":"use_file_extension"
+						},
+						{
+							"name":"Fill [simplify_gpencil_view_fill]",
+							"strid":"simplify_gpencil_view_fill"
+						},
+						{
+							"name":"Filter Size [filter_size]",
+							"strid":"filter_size"
+						},
+						{
+							"name":"Font Size [stamp_font_size]",
+							"strid":"stamp_font_size"
+						},
+						{
+							"name":"Frame Map New [frame_map_new]",
+							"strid":"frame_map_new"
+						},
+						{
+							"name":"Frame Map Old [frame_map_old]",
+							"strid":"frame_map_old"
+						},
+						{
+							"name":"High Quality Normals [use_high_quality_normals]",
+							"strid":"use_high_quality_normals"
+						},
+						{
+							"name":"Layers Tinting [simplify_gpencil_tint]",
+							"strid":"simplify_gpencil_tint"
+						},
+						{
+							"name":"Line Thickness Mode [line_thickness_mode]",
+							"strid":"line_thickness_mode"
+						},
+						{
+							"name":"Line Thickness [line_thickness]",
+							"strid":"line_thickness"
+						},
+						{
+							"name":"Lock Interface [use_lock_interface]",
+							"strid":"use_lock_interface"
+						},
+						{
+							"name":"Low Resolution Mesh [use_bake_lores_mesh]",
+							"strid":"use_bake_lores_mesh"
+						},
+						{
+							"name":"Margin Type [bake_margin_type]",
+							"strid":"bake_margin_type"
+						},
+						{
+							"name":"Margin [bake_margin]",
+							"strid":"bake_margin"
+						},
+						{
+							"name":"Metadata Input [metadata_input]",
+							"strid":"metadata_input"
+						},
+						{
+							"name":"Modifiers [simplify_gpencil_modifier]",
+							"strid":"simplify_gpencil_modifier"
+						},
+						{
+							"name":"Motion Blur [use_motion_blur]",
+							"strid":"use_motion_blur"
+						},
+						{
+							"name":"Multiple Views [use_multiview]",
+							"strid":"use_multiview"
+						},
+						{
+							"name":"Output Path [filepath]",
+							"strid":"filepath"
+						},
+						{
+							"name":"Override Scene Settings [use_sequencer_override_scene_strip]",
+							"strid":"use_sequencer_override_scene_strip"
+						},
+						{
+							"name":"Overwrite [use_overwrite]",
+							"strid":"use_overwrite"
+						},
+						{
+							"name":"Persistent Data [use_persistent_data]",
+							"strid":"use_persistent_data"
+						},
+						{
+							"name":"Pixel Aspect X [pixel_aspect_x]",
+							"strid":"pixel_aspect_x"
+						},
+						{
+							"name":"Pixel Aspect Y [pixel_aspect_y]",
+							"strid":"pixel_aspect_y"
+						},
+						{
+							"name":"Pixel Size [preview_pixel_size]",
+							"strid":"preview_pixel_size"
+						},
+						{
+							"name":"Placeholders [use_placeholder]",
+							"strid":"use_placeholder"
+						},
+						{
+							"name":"Playback Only [simplify_gpencil_onplay]",
+							"strid":"simplify_gpencil_onplay"
+						},
+						{
+							"name":"Region Maximum X [border_max_x]",
+							"strid":"border_max_x"
+						},
+						{
+							"name":"Region Maximum Y [border_max_y]",
+							"strid":"border_max_y"
+						},
+						{
+							"name":"Region Minimum X [border_min_x]",
+							"strid":"border_min_x"
+						},
+						{
+							"name":"Region Minimum Y [border_min_y]",
+							"strid":"border_min_y"
+						},
+						{
+							"name":"Render Region [use_border]",
+							"strid":"use_border"
+						},
+						{
+							"name":"Render Single Layer [use_single_layer]",
+							"strid":"use_single_layer"
+						},
+						{
+							"name":"Resolution % [resolution_percentage]",
+							"strid":"resolution_percentage"
+						},
+						{
+							"name":"Resolution X [resolution_x]",
+							"strid":"resolution_x"
+						},
+						{
+							"name":"Resolution Y [resolution_y]",
+							"strid":"resolution_y"
+						},
+						{
+							"name":"Samples [bake_samples]",
+							"strid":"bake_samples"
+						},
+						{
+							"name":"Scale [bake_user_scale]",
+							"strid":"bake_user_scale"
+						},
+						{
+							"name":"Selected to Active [use_bake_selected_to_active]",
+							"strid":"use_bake_selected_to_active"
+						},
+						{
+							"name":"Sequencer Preview Shading [sequencer_gl_preview]",
+							"strid":"sequencer_gl_preview"
+						},
+						{
+							"name":"Sequencer [use_sequencer]",
+							"strid":"use_sequencer"
+						},
+						{
+							"name":"Setup Stereo Mode [views_format]",
+							"strid":"views_format"
+						},
+						{
+							"name":"Shader Effects [simplify_gpencil_shader_fx]",
+							"strid":"simplify_gpencil_shader_fx"
+						},
+						{
+							"name":"Shutter [motion_blur_shutter]",
+							"strid":"motion_blur_shutter"
+						},
+						{
+							"name":"Simplify Child Particles [simplify_child_particles]",
+							"strid":"simplify_child_particles"
+						},
+						{
+							"name":"Simplify Child Particles [simplify_child_particles_render]",
+							"strid":"simplify_child_particles_render"
+						},
+						{
+							"name":"Simplify Shadows [simplify_shadows]",
+							"strid":"simplify_shadows"
+						},
+						{
+							"name":"Simplify Shadows [simplify_shadows_render]",
+							"strid":"simplify_shadows_render"
+						},
+						{
+							"name":"Simplify Subdivision [simplify_subdivision]",
+							"strid":"simplify_subdivision"
+						},
+						{
+							"name":"Simplify Subdivision [simplify_subdivision_render]",
+							"strid":"simplify_subdivision_render"
+						},
+						{
+							"name":"Simplify Volumes [simplify_volumes]",
+							"strid":"simplify_volumes"
+						},
+						{
+							"name":"Simplify [simplify_gpencil]",
+							"strid":"simplify_gpencil"
+						},
+						{
+							"name":"Stamp Camera [use_stamp_camera]",
+							"strid":"use_stamp_camera"
+						},
+						{
+							"name":"Stamp Date [use_stamp_date]",
+							"strid":"use_stamp_date"
+						},
+						{
+							"name":"Stamp Filename [use_stamp_filename]",
+							"strid":"use_stamp_filename"
+						},
+						{
+							"name":"Stamp Frame [use_stamp_frame]",
+							"strid":"use_stamp_frame"
+						},
+						{
+							"name":"Stamp Frame [use_stamp_frame_range]",
+							"strid":"use_stamp_frame_range"
+						},
+						{
+							"name":"Stamp Hostname [use_stamp_hostname]",
+							"strid":"use_stamp_hostname"
+						},
+						{
+							"name":"Stamp Labels [use_stamp_labels]",
+							"strid":"use_stamp_labels"
+						},
+						{
+							"name":"Stamp Lens [use_stamp_lens]",
+							"strid":"use_stamp_lens"
+						},
+						{
+							"name":"Stamp Marker [use_stamp_marker]",
+							"strid":"use_stamp_marker"
+						},
+						{
+							"name":"Stamp Note Text [stamp_note_text]",
+							"strid":"stamp_note_text"
+						},
+						{
+							"name":"Stamp Note [use_stamp_note]",
+							"strid":"use_stamp_note"
+						},
+						{
+							"name":"Stamp Output [use_stamp]",
+							"strid":"use_stamp"
+						},
+						{
+							"name":"Stamp Peak Memory [use_stamp_memory]",
+							"strid":"use_stamp_memory"
+						},
+						{
+							"name":"Stamp Render Time [use_stamp_render_time]",
+							"strid":"use_stamp_render_time"
+						},
+						{
+							"name":"Stamp Scene [use_stamp_scene]",
+							"strid":"use_stamp_scene"
+						},
+						{
+							"name":"Stamp Sequence Strip [use_stamp_sequencer_strip]",
+							"strid":"use_stamp_sequencer_strip"
+						},
+						{
+							"name":"Stamp Time [use_stamp_time]",
+							"strid":"use_stamp_time"
+						},
+						{
+							"name":"Text Color [stamp_foreground]",
+							"strid":"stamp_foreground"
+						},
+						{
+							"name":"Threads Mode [threads_mode]",
+							"strid":"threads_mode"
+						},
+						{
+							"name":"Threads [threads]",
+							"strid":"threads"
+						},
+						{
+							"name":"Transparent [film_transparent]",
+							"strid":"film_transparent"
+						},
+						{
+							"name":"Use Simplify [use_simplify]",
+							"strid":"use_simplify"
+						},
+						{
+							"name":"User Scale [use_bake_user_scale]",
+							"strid":"use_bake_user_scale"
+						}
+					]
+				},
+				"coat3D":{
+					"exchangeFolder":""
+				},
+				"VDMBrushBakerAddonData":{},
+				"scatter_properties":{},
+				"power_sequencer":{},
+				"svg_export":{},
+				"matlib":{}
+			},
+			"name":"Scene",
+			"nodes":[
+				3
+			]
+		}
+	],
+	"nodes":[
+		{
+			"camera":0,
+			"name":"PerspectiveCamera"
+		},
+		{
+			"children":[
+				0
+			],
+			"mesh":0,
+			"name":"UDcyl",
+			"translation":[
+				0,
+				1.5,
+				0
+			]
+		},
+		{
+			"children":[
+				1
+			],
+			"mesh":1,
+			"name":"LRcyl",
+			"translation":[
+				0,
+				3,
+				0
+			]
+		},
+		{
+			"children":[
+				2
+			],
+			"name":"player"
+		}
+	],
+	"cameras":[
+		{
+			"name":"PerspectiveCamera.001",
+			"perspective":{
+				"aspectRatio":1.7777777777777777,
+				"yfov":0.8726646304130554,
+				"zfar":2000,
+				"znear":0.10000000149011612
+			},
+			"type":"perspective"
+		}
+	],
+	"materials":[
+		{
+			"extras":{
+				"pov":{}
+			},
+			"name":"Material_1.024",
+			"pbrMetallicRoughness":{
+				"metallicFactor":0
+			}
+		},
+		{
+			"name":"Material_0.028",
+			"pbrMetallicRoughness":{
+				"metallicFactor":0
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"Mesh_1.018",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"Mesh_0.036",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
+					},
+					"indices":7,
+					"material":1
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":15,
+			"max":[
+				0.4330126941204071,
+				1,
+				0.5
+			],
+			"min":[
+				-0.4330126941204071,
+				-1,
+				-0.25
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":15,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":15,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":27,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":22,
+			"max":[
+				0.4330126941204071,
+				3,
+				0.5
+			],
+			"min":[
+				-0.4330126941204071,
+				-3,
+				-0.25
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":22,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":22,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":7,
+			"componentType":5123,
+			"count":36,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":180,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":180,
+			"byteOffset":180,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":120,
+			"byteOffset":360,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":54,
+			"byteOffset":480,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":264,
+			"byteOffset":536,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":264,
+			"byteOffset":800,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":176,
+			"byteOffset":1064,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":72,
+			"byteOffset":1240,
+			"target":34963
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":1312,
+			"uri":"data:application/octet-stream;base64,AAAAAAAAgD8AAAAAAAAAAAAAgD8AAACAAAAAgAAAgD8AAACAAAAAgAAAgD8AAAAAAAAAAAAAgL8AAAA/17PdPgAAgL8AAIC+17PdvgAAgL8AAIC+MjENpQAAgL8AAAA/AAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAA/17PdPgAAgL8AAIC+17PdvgAAgL8AAIC+MjENpQAAgL8AAAA/AAAAABhVeD6lW3g/DjbnPa/QfT9jhoU9AAAAAHfQfT9GhgW+yhxevlzXdz9xNQA+AAAAgBhVeD6lW3g/kxVXP+BPeD77XPi+kxVXv+BPeD77XPi+AAAAABhVeD6lW3g/AAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAAAAAAAAgD+rqqo+AACAP6uqKj8AAIA/AACAPwAAgD8AAAAAAAAAAKuqqj4AAAAAq6oqPwAAAAAAAIA/AAAAAAAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAgD8AAAA/AACAPqAwiT0AAIA+7NluPwAAgD8AAAA/AAAEAAEABAAFAAEAAQAFAAIABQAGAAIAAgAGAAMABgAHAAMADAALAAgADQAMAAkADgANAAoAAAAAAAAAAABAQAAAAD/Xs90+AABAQAAAgL7Xs92+AABAQAAAgL4yMQ2lAABAQAAAAD8AAAAAAABAwAAAAD/Xs90+AABAwAAAgL7Xs92+AABAwAAAgL4yMQ2lAABAwAAAAD8AAAAAAABAQAAAAAAAAAAAAABAQAAAAAAAAAAAAABAQAAAAAAAAAAAAABAQAAAAD/Xs90+AABAQAAAgL7Xs92+AABAQAAAgL4yMQ2lAABAQAAAAD8AAAAAAABAwAAAAAAAAAAAAABAwAAAAAAAAAAAAABAwAAAAAAAAAAAAABAwAAAAD/Xs90+AABAwAAAgL7Xs92+AABAwAAAgL4yMQ2lAABAwAAAAD8AAACAAAAAgAAAgD9ts10/AAAAALkAAL9ts12/AAAAALkAAL8AAAAAAAAAgAAAgD8AAACAAAAAAAAAgD9ts10/AAAAALkAAL9ts12/AAAAALkAAL8AAAAAAAAAAAAAgD8AAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAPwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAvwAAAIAAAAAAAACAP6uqqj4AAIA/q6oqPwAAgD8AAIA/AACAPwAAAAAAAAAAq6qqPgAAAACrqio/AAAAAAAAgD8AAAAAAAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AACAPwAAAD8AAIA+7NluPwAAgD6gMIk9AACAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAIA/AAAAPwAAgD6gMIk9AACAPuzZbj8AAIA/AAAAPwAABAABAAQABQABAAEABQACAAUABgACAAIABgADAAYABwADAAsADAAIAAwADQAJAA0ADgAKABMAEgAPABQAEwAQABUAFAARAA=="
+		}
+	]
+}
