@@ -35,5 +35,43 @@
   top: calc(20vh / 2);
   left: calc(25vw / 2);
   border-radius: 5rem;
+}
 
+.loadingScreen{
+  z-index: 10;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes wiggle {
+  0%{
+    transform: rotate(12deg)}
+    50%{
+  transform: rotate(-12deg)
+    }
+  100%{
+    transform: rotate(12deg)}
+}
+@keyframes fadeout {
+  0%{
+    opacity: 1
+  }
+  100%{
+    opacity: 0
+  }
+}
+.loadingScreen>p{
+  font-size: 3rem;
+  transform: rotate(10deg);
+  animation-name: wiggle;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite
 }
