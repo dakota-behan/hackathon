@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box
 }
+.inactive{
+    z-index: -10;
+    height:0vh;
+    width:0vh;
+    background-color: orange;
+    position:absolute;
+    margin:-50000px;
+}
+.active{
+    z-index: 4;
+    height:95%;
+    width:95%;
+    background-color: green;
+    position:fixed;
+    margin:2em;
+}
+.generalInfoBackground{
+    /* position: fixed; */
+    background-color: yellow;
+    margin:15px;
+    height:98%;
+    width:98%;
+}
