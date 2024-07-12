@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.docs.google.com	TRUE	/spreadsheets/d/1-TOvwUh-ziCB6QmLYvQlxtXuBd-aGiiO72GWAasby8o	FALSE	1999999999	COMPASS	apps-spreadsheets=CmUACWuJVyV95jZa2vATw9hMcLvQmW0T3Ky4FgLEzVzM_0Engtwdhifie34eA9sg-8lL5qsMDwf186Dd6COJFTnCSYEGQEz98wC7jPXTvWJCc9Mw-2_aveODDMlf4hkyx0Icp0j5JhCN_8a0Bhp2AAlriVcHLL6JlZquaTS05i10Dv3_F080e5ZcGjVlt3O8ISmBKeXMWOHfSUXuatIElHMdbOIRHDZHm0ICwVsEE-blXP-NZu5eoqOAat2IdvGDLuCzUD75-tdahsXHtCN6lH3G3LtGi16q1JJBUEEHb36iI-4yXA==
+.google.com	TRUE	/	FALSE	1999999999	NID	515=ohJeZDdrxjsJHmxK9nrWqbJ6vdg7Hm8ApSYiWICGRwrDn5AexojXQM-jQOW01FOuWbS8BPKVa6JZopq0PJHwkb9_SbSD39XUk7znVRv9smWakbnY2bYC_BjPXFosxUieq_Ogqm4sW_sj8t5D9OFfyhSZxT-7Yesog0uUS0nx46o
+.docs.google.com	TRUE	/	FALSE	1999999999	GFE_RTT	129
+docs.google.com	TRUE	/	FALSE	1999999999	Priority	LOW
+docs.google.com	TRUE	/	FALSE	1999999999	SameSite	strict
+

@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box
 }
+.hidden{
+  display: none;
+  height:0;
+  width:0;
+}
 .inactive{
     z-index: -10;
     height:0vh;
@@ -29,11 +34,42 @@
 .initalMenu{
   width: 75vw;
   height: 80vh;
-  background-color: red;
+  background:rgba(0,0,0,.7);
   z-index: 1;
   position: absolute;
   top: calc(20vh / 2);
   left: calc(25vw / 2);
+  border-radius: 5rem;
+  color: white
+}
+.initalMenuInner{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.closeBtn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modalPopup{
+  position: absolute;
+  width: 80vw;
+  left: 10vw;
+  top: 10vh;
+  height: 80vh;
+  border-radius: 5rem;
+}
+.modalPopup>iframe{
+  width: 80vw;
+  height: 80vh;
   border-radius: 5rem;
 }
 

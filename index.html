@@ -7,24 +7,38 @@
     <title>Sip and Play</title>
   </head>
   <body>
-    <div id="generalinfo" class="inactive">
-      <div class="generalInfoBackground">
-        <p>store hours</p>
+    <div class="textHud" id="textHud hidden"></div>
+
+    <div id="menu" class="hidden modalPopup">
+      <div class="closeBtn" id="closeBtn">❌</div>
+      <iframe src="./menu.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="reservation" class="hidden modalPopup">
+      <div class="closeBtn" id="closeBtn">❌</div>
+      <iframe src="./reservations.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="feedback" class="hidden modalPopup">
+      <div class="closeBtn" id="closeBtn">❌</div>
+      <iframe src="./feedback.html" frameborder="0"></iframe>
+    </div>
+    <div id="boardgames" class="hidden modalPopup">
+      <div class="closeBtn" id="closeBtn">❌</div>
+      <iframe src="./boardgames.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="initalMenu modalPopup" id="initalMenu">
+      <div class="initalMenuInner">
+        <h1>welcome to Sip and Play!</h1>
+        <h3>this is our interactive 3D first person shop!</h3>
+        <h3>if you wish for the regular website, click <a href="/" style="color: blue">here</a>
+          <h5>controls:</h5>
+          <h5>WASD ~ movement</h5>
+          <h5>E ~ interact</h5>
+          <button id="enterGameButton">Enter game!</button>
       </div>
     </div>
-
-    <div id="menu" class="inactive"></div>
-    <div id="calendar" class="inactive">
-      <p>Calendar</p>
-    </div>
-
-    <div id="reservation" class="inactive"></div>
-
-    <div id="mtgpage" class="inactive"></div>
-
-    <!-- <div class="initalMenu" id="initalMenu">
-      <div class="initalMenuInner"></div>
-    </div> -->
     <!-- <div class="loadingScreen" id="loadingScreen">
       <p>Loading...</p>
       <p></p>

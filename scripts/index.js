@@ -5,7 +5,7 @@ import { Capsule } from "./Capsule.js";
 import { TextGeometry } from "./TextGeometry.js";
 import { FontLoader } from "./FontLoader.js";
 
-let canControl = true;
+let canControl = false;
 const changeControl = (bool = !canControl) => {
   canControl = bool;
 };
@@ -292,35 +292,30 @@ const init = () => {
 
   glowTexture.repeat.set(1, 1.6);
 
-  // mailbox = 33,13
-  // menu = 31.5, 21.5
-  // boardgames = 37, 34
-  // reservation / calender = 25.5,26
-
   const interactionSpots = {
     mailbox: {
       cordX: 33,
       cordY: 14,
       text: "FEEDBACK",
-      // documentElement:'',
+      documentElement: "feedback",
     },
     menu: {
       cordX: 31.5,
       cordY: 21.5,
       text: "MENU",
-      // documentElement:'',
+      documentElement: "menu",
     },
     boardgames: {
       cordX: 37,
       cordY: 34,
       text: "BOARD GAME\nLIST",
-      // documentElement:'',
+      documentElement: "boardgames",
     },
     reservationCalender: {
       cordX: 25.5,
       cordY: 28,
       text: "RESERVATIONS",
-      // documentElement:'',
+      documentElement: "reservation",
     },
   };
 
@@ -369,6 +364,19 @@ const init = () => {
         mesh.position.z = e.cordY;
         scene.add(mesh);
 
+        const openModal = (key) => {
+          console.log(key);
+          if (key == "e" && e.inRange) {
+            changeControl(false);
+            document
+              .getElementById(e.documentElement)
+              .classList.remove("hidden");
+            document.exitPointerLock();
+          }
+        };
+
+        document.addEventListener("keydown", (e) => openModal(e.key));
+
         const recursiveCheck = () => {
           if (!player) {
             setTimeout(() => {
@@ -381,7 +389,9 @@ const init = () => {
 
           const distance = player.mesh.position.distanceTo(mesh.position);
           if (distance < 5) {
-            //
+            e.inRange = true;
+          } else {
+            e.inRange = false;
           }
 
           setTimeout(() => {
@@ -419,6 +429,28 @@ const init = () => {
   setTimeout(() => {
     render();
   }, 1000);
+
+  document.getElementById("enterGameButton").addEventListener("click", () => {
+    document.getElementById("initalMenu").classList.add("hidden");
+    document.getElementsByTagName("body")[0].requestPointerLock();
+    document.getElementsByTagName("body")[0].requestFullscreen();
+    changeControl(true);
+  });
+  console.log(document.getElementsByClassName("closeBtn"));
+  [...document.getElementsByClassName("closeBtn")].forEach((el) => {
+    console.log(el);
+    el.addEventListener("click", () => {
+      console.log("clickX");
+      document.getElementById("initalMenu").classList.add("hidden");
+      document.getElementById("menu").classList.add("hidden");
+      document.getElementById("reservation").classList.add("hidden");
+      document.getElementById("feedback").classList.add("hidden");
+      document.getElementById("boardgames").classList.add("hidden");
+      changeControl(true);
+      document.getElementsByTagName("body")[0].requestPointerLock();
+      document.getElementsByTagName("body")[0].requestFullscreen();
+    });
+  });
 };
 
 init();
