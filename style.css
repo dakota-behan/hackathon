@@ -1,3 +1,8 @@
+*,html,body,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
 .inactive{
     z-index: -10;
     height:0vh;
@@ -20,4 +25,14 @@
     margin:15px;
     height:98%;
     width:98%;
+}
+.initalMenu{
+  width: 75vw;
+  height: 80vh;
+  background-color: red;
+  z-index: 1;
+  position: absolute;
+  top: calc(20vh / 2);
+  left: calc(25vw / 2);
+  border-radius: 5rem;
 }

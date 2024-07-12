@@ -1,8 +1,11 @@
+let canControl = false;
+
 const init = () => {
   // scene setup
   const clock = new THREE.Clock();
   const scene = new THREE.Scene();
   const worldOctree = new Octree();
+
   const camera = new THREE.PerspectiveCamera(
     90,
     window.innerWidth / window.innerHeight,
@@ -72,19 +75,29 @@ const init = () => {
 
         renderer.setSize(window.innerWidth, window.innerHeight);
       });
+      this.camera.aspect = window.innerWidth / window.innerHeight;
+      this.camera.updateProjectionMatrix();
 
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      this.mesh.rotation.y = this.pointerX * -this.lookSpeed;
+      this.cameraUDGeo.rotation.x = this.pointerY * -this.lookSpeed;
       // this.mesh.dispatchEvent({ type: "update" });
     };
     update(delta = 0.16) {
-      this.mesh.rotation.y = this.pointerX * -this.lookSpeed;
+      this.mesh.position.y -= 0.05;
+      if (canControl) {
+        this.mesh.rotation.y =
+          this.pointerX * -this.lookSpeed * (canControl ? 1 : 0);
 
-      if (this.pointerY > 300) {
-        this.pointerY = 300;
+        if (this.pointerY > 300) {
+          this.pointerY = 300;
+        }
+        if (this.pointerY < -300) {
+          this.pointerY = -300;
+        }
+        this.cameraUDGeo.rotation.x =
+          this.pointerY * -this.lookSpeed * (canControl ? 1 : 0);
       }
-      if (this.pointerY < -300) {
-        this.pointerY = -300;
-      }
-      this.cameraUDGeo.rotation.x = this.pointerY * -this.lookSpeed;
       // console.log(delta)
       let realSpeed = 10 * delta;
       if (this.moveForward) {
@@ -145,36 +158,18 @@ const init = () => {
     }
     _onMouseDown = (event) => {
       //fullscreen/lock mouse
-      document.getElementsByTagName("body")[0].requestPointerLock();
-      document.getElementsByTagName("body")[0].requestFullscreen();
-      if (this.health > 0) {
-        switch (event.button) {
-          case 0:
-            this.leftClick = true;
-            this.handleShoot();
-            break;
-          case 2:
-            this.rightClick = true;
-            this.handleStartADS();
-            break;
-        }
+      if (canControl) {
+        document.getElementsByTagName("body")[0].requestPointerLock();
+        document.getElementsByTagName("body")[0].requestFullscreen();
       }
     };
-    _onMouseUp = (event) => {
-      switch (event.button) {
-        case 0:
-          this.leftClick = false;
-          break;
-        case 2:
-          this.rightClick = false;
-          this.handleEndADS();
-          break;
-      }
-    };
+
     _onMouseMove = (event) => {
-      if (document.fullscreen) {
+      if (document.fullscreen && canControl) {
         this.pointerX += event.movementX;
-        this.pointerX = this.pointerX % ((2 * Math.PI) / this.lookSpeed);
+        this.pointerX =
+          (this.pointerX % ((2 * Math.PI) / this.lookSpeed)) *
+          (canControl ? 1 : 0);
         this.pointerY += event.movementY;
       }
     };
@@ -198,25 +193,6 @@ const init = () => {
         case "ArrowRight":
         case "KeyD":
           this.moveRight = true;
-          break;
-
-        case "KeyR":
-          this.handleReload();
-          break;
-        case "KeyE":
-          this.interacting = true;
-          break;
-
-        case "KeyQ":
-          this.handleWeaponSwap();
-          break;
-        case "KeyF":
-          this.flashlightOn = !this.flashlightOn;
-          break;
-
-        case "ShiftRight":
-        case "ShiftLeft":
-          this.sprint = true;
           break;
       }
     };
@@ -259,8 +235,18 @@ const init = () => {
     `./scripts/staticAssets/fullMap.gltf`,
     function (model) {
       mapModel = model.scene.clone();
-      worldOctree.fromGraphNode(mapModel);
       scene.add(mapModel);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+  gltfLoader.load(
+    `./scripts/staticAssets/colMesh.gltf`,
+    function (model) {
+      worldOctree.fromGraphNode(model.scene);
+      // scene.add(model);
     },
     undefined,
     function (error) {
@@ -272,9 +258,10 @@ const init = () => {
   gltfLoader.load(
     `./scripts/staticAssets/playerSpawn.gltf`,
     function (model) {
+      model.scene.children[0].children[0].children[0].children[0].fov = 100;
       playerModel = model.scene.clone();
-
       player = new Player();
+
       // console.log(player);
       scene.add(playerModel);
     },
@@ -297,9 +284,6 @@ const init = () => {
   ambientLight.position.set(-1, 1, 1);
   scene.add(ambientLight);
 
-  // camera.position.z = 10;
-  // camera.position.x = 5;
-  // camera.position.y = 2;
   const render = () => {
     let delta = clock.getDelta();
     player.update(delta);
@@ -308,7 +292,7 @@ const init = () => {
   };
   setTimeout(() => {
     render();
-  }, 3000);
+  }, 1000);
 };
 
 init();
