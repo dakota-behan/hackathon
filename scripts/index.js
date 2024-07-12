@@ -222,7 +222,7 @@ const init = () => {
   }
 
   gltfLoader.load(
-    `./scripts/staticAssets/houseSoFar.gltf`,
+    `./scripts/staticAssets/fullMap.gltf`,
     function (model) {
       mapModel = model.scene.clone();
       scene.add(mapModel);
