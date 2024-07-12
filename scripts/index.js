@@ -1,6 +1,8 @@
 const init = () => {
   // scene setup
+  const clock = new THREE.Clock();
   const scene = new THREE.Scene();
+  const worldOctree = new Octree();
   const camera = new THREE.PerspectiveCamera(
     90,
     window.innerWidth / window.innerHeight,
@@ -20,8 +22,8 @@ const init = () => {
   let mapModel = null;
 
   class Player {
-    constructor(y = 0, x = 0) {
-      this.lookSpeed = 0.005;
+    constructor(y = 0, x = 2) {
+      this.lookSpeed = 0.003;
       this.mesh = playerModel;
       this.camera = this.mesh.children[0].children[0].children[0].children[0];
       this.cameraUDGeo = this.mesh.children[0].children[0].children[0];
@@ -29,13 +31,19 @@ const init = () => {
 
       // this.mesh
       ///////////////////////////////////////////////////////////////////////////////////////////////////////
-      this.pointerX = 0;
-      this.pointerY = 0;
+      this.pointerX = 1200;
+      this.pointerY = -60;
 
       this.x = x * 20;
       this.y = y * 20;
 
-      this.mesh.position.set(this.x, -2.5, this.y);
+      this.mesh.position.set(this.x, 4.25, this.y);
+
+      this.playerCollider = new Capsule(
+        new THREE.Vector3(0, this.mesh.position.y - 1, 0),
+        new THREE.Vector3(0, this.mesh.position.y + 1, 0),
+        0.5
+      );
 
       this.walkSpeed = 16;
       scene.add(this.mesh);
@@ -58,22 +66,27 @@ const init = () => {
       body.addEventListener("mousemove", this._onMouseMove);
       body.addEventListener("keydown", this._onKeyDown);
       body.addEventListener("keyup", this._onKeyUp);
+      window.addEventListener("resize", () => {
+        this.camera.aspect = window.innerWidth / window.innerHeight;
+        this.camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
 
       // this.mesh.dispatchEvent({ type: "update" });
     };
     update(delta = 0.16) {
-      // console.log(this);
       this.mesh.rotation.y = this.pointerX * -this.lookSpeed;
 
-      if (this.pointerY > 1570) {
-        this.pointerY = 1570;
+      if (this.pointerY > 300) {
+        this.pointerY = 300;
       }
-      if (this.pointerY < -1570) {
-        this.pointerY = -1570;
+      if (this.pointerY < -300) {
+        this.pointerY = -300;
       }
       this.cameraUDGeo.rotation.x = this.pointerY * -this.lookSpeed;
       // console.log(delta)
-      let realSpeed = 0.1;
+      let realSpeed = 10 * delta;
       if (this.moveForward) {
         //moving in the direction the player is looking
 
@@ -107,6 +120,27 @@ const init = () => {
 
         this.mesh.position.z +=
           Math.sin(this.mesh.rotation.y + Math.PI * 0.5) * realSpeed;
+      }
+
+      this.playerCollider.start.set(
+        this.mesh.position.x,
+        this.mesh.position.y + 1,
+        this.mesh.position.z
+      );
+      this.playerCollider.end.set(
+        this.mesh.position.x,
+        this.mesh.position.y - 1,
+        this.mesh.position.z
+      );
+      let result = worldOctree.capsuleIntersect(this.playerCollider);
+
+      if (result) {
+        this.playerCollider.translate(
+          result.normal.multiplyScalar(result.depth)
+        );
+        this.mesh.position.x = this.playerCollider.start.x;
+        this.mesh.position.y = this.playerCollider.start.y - 1;
+        this.mesh.position.z = this.playerCollider.start.z;
       }
     }
     _onMouseDown = (event) => {
@@ -225,6 +259,7 @@ const init = () => {
     `./scripts/staticAssets/fullMap.gltf`,
     function (model) {
       mapModel = model.scene.clone();
+      worldOctree.fromGraphNode(mapModel);
       scene.add(mapModel);
     },
     undefined,
@@ -258,21 +293,22 @@ const init = () => {
   directionalLight2.position.set(-1, 1, 1);
   scene.add(directionalLight2);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
   ambientLight.position.set(-1, 1, 1);
   scene.add(ambientLight);
 
-  camera.position.z = 3;
-  camera.position.x = 5;
-  camera.position.y = 2;
+  // camera.position.z = 10;
+  // camera.position.x = 5;
+  // camera.position.y = 2;
   const render = () => {
-    player.update();
+    let delta = clock.getDelta();
+    player.update(delta);
     renderer.render(scene, player.camera);
     requestAnimationFrame(render);
   };
   setTimeout(() => {
     render();
-  }, 1000);
+  }, 3000);
 };
 
 init();
