@@ -18,7 +18,7 @@ const mtgpageModal = document.getElementById('mtgpage')
 
 function keyChecker(e){
     console.log('User pressed: ', e.code)
-    if(e.code == 'Escape'){
+    if(e.code == 'KeyQ'){
         closeAllModals()
     }
     if(e.code =='KeyF'){
