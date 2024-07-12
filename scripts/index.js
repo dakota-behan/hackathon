@@ -62,7 +62,7 @@ const init = () => {
       // this.mesh.dispatchEvent({ type: "update" });
     };
     update(delta = 0.16) {
-      console.log(this);
+      // console.log(this);
       this.mesh.rotation.y = this.pointerX * -this.lookSpeed;
 
       if (this.pointerY > 1570) {
