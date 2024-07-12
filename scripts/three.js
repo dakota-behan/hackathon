@@ -44945,7 +44945,7 @@ if (typeof window !== "undefined") {
   }
 }
 
-const THREE = {
+export {
   ACESFilmicToneMapping,
   AddEquation,
   AddOperation,

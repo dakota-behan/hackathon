@@ -1,4 +1,16 @@
-let canControl = false;
+import * as THREE from "./three.js";
+import Octree from "./Octree.js";
+import { GLTFLoader } from "./GLTFLoader.js";
+import { Capsule } from "./Capsule.js";
+import { TextGeometry } from "./TextGeometry.js";
+import { FontLoader } from "./FontLoader.js";
+
+let canControl = true;
+const changeControl = (bool = !canControl) => {
+  canControl = bool;
+};
+
+addFunction("changeControl", changeControl);
 
 const init = () => {
   // scene setup
@@ -64,8 +76,8 @@ const init = () => {
       //adding controls to the page
 
       let body = document.getElementsByTagName("body")[0];
+
       body.addEventListener("mousedown", this._onMouseDown);
-      body.addEventListener("mouseup", this._onMouseUp);
       body.addEventListener("mousemove", this._onMouseMove);
       body.addEventListener("keydown", this._onKeyDown);
       body.addEventListener("keyup", this._onKeyUp);
@@ -84,6 +96,7 @@ const init = () => {
       // this.mesh.dispatchEvent({ type: "update" });
     };
     update(delta = 0.16) {
+      // console.log(this.mesh.position.x, this.mesh.position.z);
       this.mesh.position.y -= 0.05;
       if (canControl) {
         this.mesh.rotation.y =
@@ -271,6 +284,119 @@ const init = () => {
     }
   );
 
+  const glowTexture = new THREE.TextureLoader().load(
+    "./scripts/staticAssets/waypointTexture.png"
+  );
+
+  const fontLoader = new FontLoader();
+
+  glowTexture.repeat.set(1, 1.6);
+
+  // mailbox = 33,13
+  // menu = 31.5, 21.5
+  // boardgames = 37, 34
+  // reservation / calender = 25.5,26
+
+  const interactionSpots = {
+    mailbox: {
+      cordX: 33,
+      cordY: 14,
+      text: "FEEDBACK",
+      // documentElement:'',
+    },
+    menu: {
+      cordX: 31.5,
+      cordY: 21.5,
+      text: "MENU",
+      // documentElement:'',
+    },
+    boardgames: {
+      cordX: 37,
+      cordY: 34,
+      text: "BOARD GAME\nLIST",
+      // documentElement:'',
+    },
+    reservationCalender: {
+      cordX: 25.5,
+      cordY: 28,
+      text: "RESERVATIONS",
+      // documentElement:'',
+    },
+  };
+
+  fontLoader.load(
+    "./scripts/staticAssets/helvetiker_regular.typeface.json",
+    (font) => {
+      for (let key in interactionSpots) {
+        const e = interactionSpots[key];
+
+        const cylinderGeo = new THREE.CylinderGeometry(
+          2.5,
+          2.5,
+          10,
+          16,
+          1,
+          true
+        );
+        const cylinderMat = new THREE.MeshStandardMaterial({
+          side: 2,
+          map: glowTexture,
+          transparent: true,
+        });
+        const cylinderMesh = new THREE.Mesh(cylinderGeo, cylinderMat);
+        cylinderMesh.position.x = e.cordX;
+        cylinderMesh.position.y = 5;
+        cylinderMesh.position.z = e.cordY;
+        scene.add(cylinderMesh);
+        console.log(key);
+        const geometry = new TextGeometry(e.text, {
+          font: font,
+          size: 0.5,
+          height: 0.5,
+          curveSegments: 8,
+          bevelEnabled: true,
+          bevelThickness: 0.125,
+          bevelSize: 0.025,
+          bevelOffset: 0,
+          bevelSegments: 4,
+        });
+        geometry.center();
+        // material, mesh
+        const material = new THREE.MeshNormalMaterial();
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.x = e.cordX;
+        mesh.position.y = 8;
+        mesh.position.z = e.cordY;
+        scene.add(mesh);
+
+        const recursiveCheck = () => {
+          if (!player) {
+            setTimeout(() => {
+              try {
+                recursiveCheck();
+              } catch (e) {}
+            }, 1000 / 60);
+          }
+          mesh.rotation.y += 0.01;
+
+          const distance = player.mesh.position.distanceTo(mesh.position);
+          if (distance < 5) {
+            //
+          }
+
+          setTimeout(() => {
+            try {
+              recursiveCheck();
+            } catch (e) {}
+          }, 1000 / 60);
+        };
+        try {
+          recursiveCheck();
+        } catch (e) {}
+      }
+    }
+  );
+
   // Scene lighting
   const directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
   directionalLight.position.set(1, 1, 1);
@@ -297,15 +423,7 @@ const init = () => {
 
 init();
 
-///////////////////////////////
-
-// const geometry = new THREE.BoxGeometry(1, 1, 1);
-// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-// const cube = new THREE.Mesh(geometry, material);
-// scene.add(cube);
-
-// camera.position.z = 5;
-
-// function animate() {
-//   renderer.render(scene, camera);
-// }
+// mailbox = 33,13
+// menu = 31.5, 21.5
+// boardgames = 37, 34
+// reservation / calender = 25.5,26

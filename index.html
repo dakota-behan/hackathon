@@ -29,21 +29,10 @@
       <p>Loading...</p>
       <p></p>
     </div> -->
-
-    <script src="./scripts/three.js"></script>
-    <script src="./scripts/GLTFLoader.js"></script>
-    <script src="./scripts/Capsule.js"></script>
-    <script src="./scripts/Octree.js"></script>
-    <script src="./scripts/TextGeometry.js"></script>
-    <script src="./scripts/BufferGeometryUtils.js"></script>
-
-    <script src="./scripts/index.js"></script>
-
-    <!-- script gotta go on bottom to work yoooooo -->
-    <script src="./scripts/modal.js"></script>
-    <!-- <script type="module">
-      import * as THREE from './scripts/three.js'
-      console.log(THREE)
-    </script> -->
+    <script>
+      const raisedFunctions={}
+      const addFunction=(name,func)=>raisedFunctions[name]=func
+    </script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
